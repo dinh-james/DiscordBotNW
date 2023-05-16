@@ -1,12 +1,12 @@
 {
-  "name": "discrodbot",
+  "name": "nwct-bot",
   "version": "1.0.0",
-  "description": "discordbot",
-  "main": "main.js",
+  "description": "NWCT Bot",
+  "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Wevvin",
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.5.3",
