@@ -97,7 +97,7 @@ class Guild {
         const current = new Date()
         const warStartMillis = new Date(current.getFullYear(), current.getMonth(), current.getDate(), current.getHours(), current.getMinutes() + parseInt(timeArgs[0]), current.getSeconds() + parseInt(timeArgs[1])).getTime();
         if (this.checkForCollidingTimers(warStartMillis)) {
-            msg.reply(time + " collides with a different war. !leaveWar the current war or use /list and /unschedule-war unwanted wars.")
+            msg.reply(time + " collides with a different war. /leave-war the current war or use /list and /unschedule-war unwanted wars.")
             return;
         }
         const war = new War(this, msg, warStartMillis, this.startCallback, this.leaveCallback);
@@ -113,7 +113,7 @@ class Guild {
             return;
         }
         if (this.checkForCollidingTimers(warStartMillis)) {
-            msg.reply(time + " collides with a different war. /leaveWar the curent war or use /list and /unschedule-war unwanted wars.")
+            msg.reply(time + " collides with a different war. /leave-war the current war or use /list and /unschedule-war unwanted wars.")
             return;
         }
         const war = new War(this, msg, warStartMillis, this.startCallback, this.leaveCallback);
@@ -309,7 +309,7 @@ function buildSettingsDescriptorMap() {
         {
             name: "timezone",
             value: "19:30",
-            description: "Set the bots time calcluations to match the current time. Either put in your local time or the time of the server you are playing on."
+            description: "Set the bots time calculations to match the current time. Either put in your local time or the time of the server you are playing on."
         },
     ].forEach(element => resultMap.set(element.name, element));
     return resultMap;
